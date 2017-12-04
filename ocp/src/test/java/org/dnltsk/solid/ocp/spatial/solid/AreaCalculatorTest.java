@@ -10,6 +10,8 @@ import static org.assertj.core.api.Assertions.within;
 
 public class AreaCalculatorTest {
 
+    private AreaCalculator areaCalculator = new AreaCalculator();
+
     @Test
     public void mixed_up_areas_are_summed_up_correctly() throws Exception {
         Rectangle rectangle = new Rectangle();
@@ -19,7 +21,7 @@ public class AreaCalculatorTest {
         circle.radius = 2;
         List<Area> rectangles = Arrays.asList(rectangle, circle);
 
-        double area = new AreaCalculator().calcArea(rectangles);
+        double area = areaCalculator.calcArea(rectangles);
         assertThat(area).isCloseTo(18.567, within(0.001));
     }
 

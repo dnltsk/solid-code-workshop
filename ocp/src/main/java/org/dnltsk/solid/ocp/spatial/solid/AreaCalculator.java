@@ -4,10 +4,10 @@ import java.util.List;
 
 public class AreaCalculator {
 
-    public double calcArea(List<Area> surfaceGeometries) {
-        return surfaceGeometries.stream()
-                .mapToDouble(Area::calcArea)
-                .sum();
+    public double calcArea(List<Area> areaGeometries) {
+        return areaGeometries.stream()
+            .mapToDouble(Area::calcArea)
+            .sum();
     }
 
 }
