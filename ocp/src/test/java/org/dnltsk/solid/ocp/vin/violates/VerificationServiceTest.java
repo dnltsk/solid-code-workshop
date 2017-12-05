@@ -16,7 +16,7 @@ public class VerificationServiceTest {
 
     @Test
     public void stolen_cars_are_detected_correctly() throws Exception {
-        Boolean isVerified = verificationService.verify("mb_1");
+        Boolean isVerified = verificationService.verify("md_3");
         assertThat(isVerified).isFalse();
     }
 

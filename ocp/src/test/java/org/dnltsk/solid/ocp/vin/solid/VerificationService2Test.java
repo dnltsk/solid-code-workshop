@@ -1,5 +1,6 @@
 package org.dnltsk.solid.ocp.vin.solid;
 
+import org.dnltsk.solid.ocp.vin.solid.verifier.IsLenghtCorrectVerifier;
 import org.dnltsk.solid.ocp.vin.solid.verifier.IsMercedesBenzCarVerifier;
 import org.dnltsk.solid.ocp.vin.solid.verifier.IsNotRecallCampaignAffectedVerifier;
 import org.dnltsk.solid.ocp.vin.solid.verifier.IsNotStolenVerifier;
@@ -23,7 +24,7 @@ public class VerificationService2Test {
 
     @Test
     public void good_cars_are_detected_correctly() throws Exception {
-        Boolean isVerified = verificationService.verify("mb_3");
+        Boolean isVerified = verificationService.verify("mb_45678901234567");
         assertThat(isVerified).isTrue();
     }
 
@@ -38,7 +39,8 @@ public class VerificationService2Test {
         List<Class> expectedVerifier = Arrays.asList(
             IsMercedesBenzCarVerifier.class,
             IsNotStolenVerifier.class,
-            IsNotRecallCampaignAffectedVerifier.class
+            IsNotRecallCampaignAffectedVerifier.class,
+            IsLenghtCorrectVerifier.class
         );
 
         assertThat(verificationService.vinVerifiers).hasSameSizeAs(expectedVerifier);

@@ -10,4 +10,13 @@ public class AreaCalculator {
             .sum();
     }
 
+    /**
+     * This is now somehow obsolete
+     * @param areaGeometry
+     * @return
+     */
+    public double calcArea(Area areaGeometry){
+        return areaGeometry.calcArea();
+    }
+
 }

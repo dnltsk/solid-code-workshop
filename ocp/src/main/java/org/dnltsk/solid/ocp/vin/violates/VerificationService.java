@@ -10,14 +10,17 @@ public class VerificationService {
     }
 
     private boolean isMercedesBenzCar(String vin) {
+        //[insert complex code here]
         return vin.toLowerCase().startsWith("mb");
     }
 
     private boolean isNotStolen(String vin) {
+        //[insert complex code here]
         return !vin.endsWith("1");
     }
 
     private boolean isNotRecallCampaignAffected(String vin) {
+        //[insert complex code here]
         return !vin.endsWith("2");
     }
 
