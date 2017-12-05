@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class IsNotStolenVerifierTest {
 
-    IsNotStolenVerifier verifier = new IsNotStolenVerifier();
+    private VinVerifier verifier = new IsNotStolenVerifier();
 
     @Test
     public void stolen_cars_are_detected_correctly() throws Exception {

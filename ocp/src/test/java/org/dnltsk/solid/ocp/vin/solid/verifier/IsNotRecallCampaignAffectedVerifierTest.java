@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class IsNotRecallCampaignAffectedVerifierTest {
 
-    private IsNotRecallCampaignAffectedVerifier verifier = new IsNotRecallCampaignAffectedVerifier();
+    private VinVerifier verifier = new IsNotRecallCampaignAffectedVerifier();
 
     @Test
     public void recall_campaign_affected_cars_are_detected_correctly() throws Exception {
